@@ -8,6 +8,18 @@
             sequence="10"
             action="clv_medicament.clv_medicament_action"/>
 
+        <menuitem name="Lists" id="clv_medicament.menu_pharmacy_medicament_medicaments_lists"
+            parent="clv_medicament.menu_pharmacy_medicament_medicaments"
+            groups="clv_medicament.group_user"
+            sequence="10"
+            action="clv_medicament.clv_medicament_list_action"/>
+
+        <menuitem name="List Items" id="clv_medicament.menu_pharmacy_medicament_medicaments_list_items"
+            parent="clv_medicament.menu_pharmacy_medicament_medicaments"
+            groups="clv_medicament.group_user"
+            sequence="20"
+            action="clv_medicament.clv_medicament_list_item_action"/>
+
         <menuitem name="Medicament" id="clv_medicament.menu_pharmacy_config_config_medicament" 
             parent="clv_base.menu_pharmacy_config_config"
             groups="clv_medicament.group_user"
