@@ -8,5 +8,11 @@
             sequence="20"
             action="clv_card.clv_card_action"/>
 
+        <menuitem name="Card Categories" id="clv_card.menu_insurance_insurance_config_card_categories" 
+            parent="clv_base.menu_insurance_config_config"
+            groups="clv_card.group_user"
+            sequence="20"
+            action="clv_card.clv_card_category_action"/>
+
     </data>
 </odoo>
