@@ -28,8 +28,10 @@
     'website': 'https://github.com/CLVsol',
     'depends': [
         'clv_card',
+        'clv_insured_pbm',
     ],
     'data': [
+        'views/insured_view.xml',
         'views/card_menu_view.xml',
     ],
     'demo': [],

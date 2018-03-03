@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record id="clv_insured_view_form_card" model="ir.ui.view">
+            <field name="name">clv.insured.form</field>
+            <field name="model">clv.insured</field>
+            <field name="inherit_id" ref="clv_insured.clv_insured_view_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <page name="settings" position="before">
+                    <page string="Cards">
+                        <group>
+                            <field name="count_cards"/>
+                            <field name="card_ids" colspan="4" nolabel="1"/>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <record id="clv_insured_view_tree_card" model="ir.ui.view">
+            <field name="name">clv.insured.tree</field>
+            <field name="model">clv.insured</field>
+            <field name="inherit_id" ref="clv_insured.clv_insured_view_tree"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="code" position="after">
+                    <field name="count_cards" sum="Total Number of Cards"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="clv_insured_view_search_card" model="ir.ui.view">
+            <field name="name">clv.insured.search</field>
+            <field name="model">clv.insured</field>
+            <field name="inherit_id" ref="clv_insured.clv_insured_view_search"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <group  name="group_by" position="inside">
+                    <filter string="Cards" context="{'group_by': 'count_cards'}"/>
+                </group>
+            </field>
+        </record>
+
+        <record id="clv_card_view_form_insured" model="ir.ui.view">
+            <field name="name">clv.card.form</field>
+            <field name="model">clv.card</field>
+            <field name="inherit_id" ref="clv_card.clv_card_view_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <group name="status" position="before">
+                    <group name="insured_info" string="Insured Information">
+                        <field name="insured_id" options='{"no_open": False, "no_create": True}'/>
+                        <field name="insured_code" string="Insured Code"/>
+                        <field name="insured_alias" string="Insured Alias"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+        <record id="clv_card_view_tree_insured" model="ir.ui.view">
+            <field name="name">clv.card.tree</field>
+            <field name="model">clv.card</field>
+            <field name="inherit_id" ref="clv_card.clv_card_view_tree"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="sequence_code" position="after">
+                    <field name="insured_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="clv_card_view_search_insured" model="ir.ui.view">
+            <field name="name">clv.card.search</field>
+            <field name="model">clv.card</field>
+            <field name="inherit_id" ref="clv_card.clv_card_view_search"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <field name="sequence_code" position="after">
+                    <field name="insured_id"/>
+                </field>
+                <group name="group_by" position="inside">
+                    <filter string="Insured" context="{'group_by': 'insured_id'}"/>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</odoo>
