@@ -27,7 +27,7 @@
     'license': 'AGPL-3',
     'website': 'https://github.com/CLVsol',
     'depends': [
-        'clv_insured',
+        'clv_medicament',
     ],
     'data': [
         'views/medicament_menu_view.xml',
