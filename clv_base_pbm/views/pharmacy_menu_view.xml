@@ -21,15 +21,5 @@
             groups="clv_base.group_manager"
             sequence="90"/>
 
-        <!--menuitem name="Medicament" id="clv_base.menu_pharmacy_config_medicament"  
-            parent="clv_base.menu_pharmacy_config"
-            groups="clv_base.group_manager"
-            sequence="10"/-->
-
-        <!--menuitem name="Dispensation" id="clv_base.menu_pharmacy_config_dispensation"  
-            parent="clv_base.menu_pharmacy_config"
-            groups="clv_base.group_manager"
-            sequence="20"/-->
-
     </data>
 </openerp>
