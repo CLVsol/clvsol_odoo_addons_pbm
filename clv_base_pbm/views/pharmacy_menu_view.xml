@@ -11,20 +11,25 @@
             groups="clv_base.group_user"
             sequence="10"/>
 
+        <menuitem name="Dispensation" id="clv_base.menu_pharmacy_dispensation"  
+            parent="clv_base.menu_pharmacy"
+            groups="clv_base.group_user"
+            sequence="20"/>
+
         <menuitem name="Configuration" id="clv_base.menu_pharmacy_config"  
             parent="clv_base.menu_pharmacy"
             groups="clv_base.group_manager"
             sequence="90"/>
 
-        <menuitem name="Configuration" id="clv_base.menu_pharmacy_config_config"  
+        <!--menuitem name="Medicament" id="clv_base.menu_pharmacy_config_medicament"  
             parent="clv_base.menu_pharmacy_config"
             groups="clv_base.group_manager"
-            sequence="10"/>
+            sequence="10"/-->
 
-        <menuitem name="Medicament" id="clv_base.menu_pharmacy_config_config_medicament"  
-            parent="clv_base.menu_pharmacy_config_config"
+        <!--menuitem name="Dispensation" id="clv_base.menu_pharmacy_config_dispensation"  
+            parent="clv_base.menu_pharmacy_config"
             groups="clv_base.group_manager"
-            sequence="10"/>
+            sequence="20"/-->
 
     </data>
 </openerp>
