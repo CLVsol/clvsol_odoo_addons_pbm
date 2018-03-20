@@ -30,6 +30,7 @@
         'clv_medicament_dispensation',
     ],
     'data': [
+        'views/medicament_dispensation_menu_view.xml',
     ],
     'demo': [],
     'test': [],
