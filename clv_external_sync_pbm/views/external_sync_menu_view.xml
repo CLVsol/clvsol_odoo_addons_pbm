@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="External Sync" id="clv_external_sync.menu_base_config_config_external_sync"
+            parent="clv_base.menu_base_config_config"
+            groups="clv_external_sync.group_user"
+            sequence="300"/>
+
+        <menuitem name="Hosts" id="clv_external_sync.menu_base_config_config_external_sync_hosts" 
+            parent="clv_external_sync.menu_base_config_config_external_sync"
+            groups="clv_external_sync.group_user"
+            sequence="10"
+            action="clv_external_sync.clv_external_sync_host_action"/>
+
+    </data>
+</odoo>
