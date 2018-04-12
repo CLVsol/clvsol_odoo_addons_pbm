@@ -27,9 +27,8 @@ class InsuredGroup(models.Model):
 
     state = fields.Selection(
         [('draft', 'New'),
-         ('suspended', 'Suspended'),
          ('active', 'Active'),
-         ('inactive', 'Inactive'),
+         ('suspended', 'Suspended'),
          ('cancelled', 'Cancelled'),
          ], string='State', default='draft', readonly=True, required=True
     )
@@ -57,19 +56,14 @@ class InsuredGroup(models.Model):
             insured_group.change_state('draft')
 
     @api.multi
-    def action_suspend(self):
-        for insured_group in self:
-            insured_group.change_state('suspended')
-
-    @api.multi
     def action_activate(self):
         for insured_group in self:
             insured_group.change_state('active')
 
     @api.multi
-    def action_inactivate(self):
+    def action_suspend(self):
         for insured_group in self:
-            insured_group.change_state('inactive')
+            insured_group.change_state('suspended')
 
     @api.multi
     def action_cancel(self):
