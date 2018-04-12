@@ -18,28 +18,4 @@
 #
 ###############################################################################
 
-{
-    'name': 'Insured (customizations for CLVhealth-PBM Solution)',
-    'summary': 'Insured Module customizations for CLVhealth-PBM Solution.',
-    'version': '3.0.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'https://github.com/CLVsol',
-    'depends': [
-        'clv_insured',
-    ],
-    'data': [
-        'views/insured_state_view.xml',
-        'views/insured_menu_view.xml',
-    ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+from . import insured_state
