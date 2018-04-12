@@ -32,6 +32,7 @@
     ],
     'data': [
         'views/insured_view.xml',
+        'views/card_state_view.xml',
         'views/card_menu_view.xml',
     ],
     'demo': [],
