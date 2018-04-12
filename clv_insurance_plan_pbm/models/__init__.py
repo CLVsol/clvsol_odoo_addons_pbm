@@ -18,28 +18,4 @@
 #
 ###############################################################################
 
-{
-    'name': 'Insurance Plan (customizations for CLVhealth-PBM Solution)',
-    'summary': 'Insurance Plan Module customizations for CLVhealth-PBM Solution.',
-    'version': '3.0.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'https://github.com/CLVsol',
-    'depends': [
-        'clv_insurance_plan',
-    ],
-    'data': [
-        'views/insurance_plan_state_view.xml',
-        'views/insurance_plan_menu_view.xml',
-    ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+from . import insurance_plan_state
