@@ -18,28 +18,4 @@
 #
 ###############################################################################
 
-{
-    'name': 'Insured Group (customizations for CLVhealth-PBM Solution)',
-    'summary': 'Insured Group Module customizations for CLVhealth-PBM Solution.',
-    'version': '3.0.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'https://github.com/CLVsol',
-    'depends': [
-        'clv_insured_group',
-    ],
-    'data': [
-        'views/insured_group_state_view.xml',
-        'views/insured_group_menu_view.xml',
-    ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+from . import insured_group_state
