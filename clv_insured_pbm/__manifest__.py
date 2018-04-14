@@ -31,6 +31,7 @@
     ],
     'data': [
         'views/insured_state_view.xml',
+        'views/insured_group_view.xml',
         'views/insured_menu_view.xml',
     ],
     'demo': [],

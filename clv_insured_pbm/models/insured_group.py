@@ -18,5 +18,34 @@
 #
 ###############################################################################
 
-from . import insured_state
-from . import insured_group
+from odoo import api, fields, models
+
+
+class InsuredGroup(models.Model):
+    _inherit = 'clv.insured_group'
+
+    insured_ids = fields.One2many(
+        comodel_name='clv.insured',
+        inverse_name='insured_group_id',
+        string='Insureds'
+    )
+    count_insureds = fields.Integer(
+        string='Number of Insureds',
+        compute='_compute_count_insureds',
+        store=True
+    )
+
+    @api.depends('insured_ids')
+    def _compute_count_insureds(self):
+        for r in self:
+            r.count_insureds = len(r.insured_ids)
+
+
+class Insured(models.Model):
+    _inherit = 'clv.insured'
+
+    insured_group_id = fields.Many2one(
+        comodel_name='clv.insured_group',
+        string='Insured Group',
+        ondelete='restrict'
+    )
