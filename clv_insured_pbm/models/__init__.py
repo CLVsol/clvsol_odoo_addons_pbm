@@ -20,3 +20,4 @@
 
 from . import insured_state
 from . import insured_group
+from . import insurance_plan

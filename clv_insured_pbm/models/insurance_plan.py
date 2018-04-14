@@ -18,30 +18,34 @@
 #
 ###############################################################################
 
-{
-    'name': 'Insured (customizations for CLVhealth-PBM Solution)',
-    'summary': 'Insured Module customizations for CLVhealth-PBM Solution.',
-    'version': '3.0.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'https://github.com/CLVsol',
-    'depends': [
-        'clv_insured',
-    ],
-    'data': [
-        'views/insured_state_view.xml',
-        'views/insured_group_view.xml',
-        'views/insurance_plan_view.xml',
-        'views/insured_menu_view.xml',
-    ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+from odoo import api, fields, models
+
+
+class InsurancePlan(models.Model):
+    _inherit = 'clv.insurance_plan'
+
+    insured_ids = fields.One2many(
+        comodel_name='clv.insured',
+        inverse_name='insurance_plan_id',
+        string='Insureds'
+    )
+    count_insureds = fields.Integer(
+        string='Number of Insureds',
+        compute='_compute_count_insureds',
+        store=True
+    )
+
+    @api.depends('insured_ids')
+    def _compute_count_insureds(self):
+        for r in self:
+            r.count_insureds = len(r.insured_ids)
+
+
+class Insured(models.Model):
+    _inherit = 'clv.insured'
+
+    insurance_plan_id = fields.Many2one(
+        comodel_name='clv.insurance_plan',
+        string='Insurance Plan',
+        ondelete='restrict'
+    )
