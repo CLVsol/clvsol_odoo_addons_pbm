@@ -54,6 +54,13 @@
                         <field name="insured_id" options='{"no_open": False, "no_create": True}'/>
                         <field name="insured_code" string="Insured Code"/>
                         <field name="insured_alias" string="Insured Alias"/>
+                        <field name="insured_birthday" string="Insured Date of Birth"/>
+                        <field name="insured_gender" string="Insured Gender"/>
+                        <field name="insured_insured_group_id" string="Insured Group"/>
+                        <field name="insured_group_reg_number" string="Register Number"/>
+                        <field name="insured_insurance_plan_id" string="Insurance Plan"/>
+                        <field name="insured_state" string="Insured State"/>
+                        <field name="insured_category_names" string="Insured Categories"/>
                     </group>
                 </group>
             </field>
@@ -67,6 +74,12 @@
             <field name="arch" type="xml">
                 <field name="sequence_code" position="after">
                     <field name="insured_id"/>
+                    <field name="insured_gender"/>
+                    <field name="insured_insured_group_id"/>
+                    <field name="insured_group_reg_number"/>
+                    <field name="insured_insurance_plan_id"/>
+                    <field name="insured_state"/>
+                    <field name="insured_category_names"/>
                 </field>
             </field>
         </record>
@@ -79,9 +92,20 @@
             <field name="arch" type="xml">
                 <field name="sequence_code" position="after">
                     <field name="insured_id"/>
+                    <field name="insured_gender"/>
+                    <field name="insured_insured_group_id"/>
+                    <field name="insured_group_reg_number"/>
+                    <field name="insured_insurance_plan_id"/>
+                    <field name="insured_state"/>
+                    <field name="insured_category_names"/>
                 </field>
                 <group name="group_by" position="inside">
                     <filter string="Insured" context="{'group_by': 'insured_id'}"/>
+                    <filter string="Insured Gender" context="{'group_by': 'insured_gender'}"/>
+                    <filter string="Insurance Group" context="{'group_by': 'insured_insured_group_id'}"/>
+                    <filter string="Insurance Plan" context="{'group_by': 'insured_insurance_plan_id'}"/>
+                    <filter string="Insured State" context="{'group_by': 'insured_state'}"/>
+                    <filter string="Insured Categories" context="{'group_by': 'insured_category_names'}"/>
                 </group>
             </field>
         </record>

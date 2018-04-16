@@ -52,10 +52,67 @@ class Card(models.Model):
     insured_code = fields.Char(
         string='Insured Code',
         related='insured_id.code',
-        store=False
+        store=False,
+        readonly=True
     )
     insured_alias = fields.Char(
         string='Insured Alias',
         related='insured_id.alias',
-        store=False
+        store=False,
+        readonly=True
+    )
+    insured_birthday = fields.Date(
+        string="Insured Date of Birth",
+        related='insured_id.birthday',
+        store=False,
+        readonly=True
+    )
+    insured_gender = fields.Selection(
+        [('M', 'Male'),
+         ('F', 'Female'),
+         ('O', 'Other'),
+         ],
+        string='Insured Gender',
+        related='insured_id.gender',
+        store=True,
+        readonly=True
+    )
+    insured_insured_group_id = fields.Many2one(
+        comodel_name='clv.insured_group',
+        string='Insured Group',
+        related='insured_id.insured_group_id',
+        store=True,
+        readonly=True
+    )
+    insured_group_reg_number = fields.Char(
+        string='Register Number',
+        help='Insured Register Number at Insured Group.',
+        related='insured_id.group_reg_number',
+        store=False,
+        readonly=True
+    )
+    insured_insurance_plan_id = fields.Many2one(
+        comodel_name='clv.insurance_plan',
+        string='Insurance Plan',
+        related='insured_id.insurance_plan_id',
+        store=True,
+        readonly=True
+    )
+    insured_state = fields.Selection(
+        [('draft', 'New'),
+         ('processing', 'Processing'),
+         ('active', 'Active'),
+         ('suspended', 'Suspended'),
+         ('cancelled', 'Cancelled'),
+         ],
+        string='Insured State',
+        related='insured_id.state',
+        store=True,
+        readonly=True
+    )
+    insured_category_names = fields.Char(
+        string='Insured Categories',
+        related='insured_id.category_names',
+        store=True,
+        readonly=True
     )
