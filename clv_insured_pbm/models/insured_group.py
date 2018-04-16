@@ -49,3 +49,7 @@ class Insured(models.Model):
         string='Insured Group',
         ondelete='restrict'
     )
+    group_reg_number = fields.Char(
+        string='Register Number',
+        help='Insured Register Number at Insured Group.'
+    )

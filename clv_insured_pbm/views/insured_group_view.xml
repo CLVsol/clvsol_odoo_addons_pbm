@@ -52,6 +52,8 @@
                 <div name="title" position="inside">
                     <label for="insured_group_id" class="oe_edit_only"/>
                     <h3><field name="insured_group_id" placeholder="Insured Group..." options="{'no_open': False, 'no_create': True}"/></h3>
+                    <label for="group_reg_number" class="oe_edit_only"/>
+                    <h3><field name="group_reg_number" placeholder="Register Number..."/></h3>
                 </div>
             </field>
         </record>
@@ -64,6 +66,7 @@
             <field name="arch" type="xml">
                 <field name="code" position="after">
                     <field name="insured_group_id"/>
+                    <field name="group_reg_number"/>
                 </field>
             </field>
         </record>
