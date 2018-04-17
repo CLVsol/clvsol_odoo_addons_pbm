@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Model Export" id="clv_export.menu_exports_exports_model_export"  
+            parent="clv_base.menu_exports_exports"
+            groups="clv_base.group_user"
+            sequence="10"
+            action="clv_export.clv_model_export_action"/>
+
+    </data>
+</odoo>
