@@ -31,6 +31,7 @@
     ],
     'data': [
         'views/base_menu_view.xml',
+        'views/export_menu_view.xml',
         'views/insurance_menu_view.xml',
         'views/pharmacy_menu_view.xml',
         'data/annotation_seq.xml',

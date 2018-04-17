@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem name="Exports" id="clv_base.menu_exports" 
+            groups="clv_base.group_user"
+            sequence="20"/>
+
+        <menuitem name="Exports" id="clv_base.menu_exports_exports"  
+            parent="clv_base.menu_exports"
+            groups="clv_base.group_user"
+            sequence="10"/>
+
+        <menuitem name="Configuration" id="clv_base.menu_exports_config"  
+            parent="clv_base.menu_exports"
+            groups="clv_base.group_manager"
+            sequence="90"/>
+
+        <menuitem name="Configuration" id="clv_base.menu_exports_config_config"  
+            parent="clv_base.menu_exports_config"
+            groups="clv_base.group_manager"
+            sequence="10"/>
+
+    </data>
+</odoo>
