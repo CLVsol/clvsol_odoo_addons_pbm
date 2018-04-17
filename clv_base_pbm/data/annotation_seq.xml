@@ -3,7 +3,7 @@
     <data noupdate="1">
 
         <record id="clv_base.clv_annotation_seq" model="ir.sequence">
-            <field name="padding" eval="4"/>
+            <field name="padding" eval="9"/>
             <field name="prefix">12</field>
             <field name="number_next">1</field>
             <field name="number_increment">1</field>
