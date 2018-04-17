@@ -18,4 +18,11 @@
 #
 ###############################################################################
 
-from . import models
+from openerp import models
+
+
+class ModelExport(models.AbstractModel):
+    _inherit = 'clv.object.model_export'
+
+    def model_export_dir_path(self):
+        return '/opt/openerp/pbm/data/xls'
