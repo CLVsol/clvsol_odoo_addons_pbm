@@ -2,11 +2,23 @@
 <odoo>
     <data>
 
-        <menuitem name="Model Export" id="clv_export.menu_exports_exports_model_export"  
+        <menuitem name="Model Export Template" id="clv_export.menu_exports_exports_model_export_template"  
             parent="clv_base.menu_exports_exports"
             groups="clv_base.group_user"
             sequence="10"
+            action="clv_export.clv_model_export_template_action"/>
+
+        <menuitem name="Model Export" id="clv_export.menu_exports_exports_model_export"  
+            parent="clv_base.menu_exports_exports"
+            groups="clv_base.group_user"
+            sequence="20"
             action="clv_export.clv_model_export_action"/>
+
+        <menuitem name="Model Export Fields" id="clv_export.menu_exports_exports_model_export_fields"  
+            parent="clv_export.menu_exports_exports_model_export"
+            groups="clv_base.group_user"
+            sequence="10"
+            action="clv_export.clv_model_export_field_action"/>
 
     </data>
 </odoo>
