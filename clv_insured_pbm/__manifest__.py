@@ -28,11 +28,13 @@
     'website': 'https://github.com/CLVsol',
     'depends': [
         'clv_insured',
+        'clv_export_pbm'
     ],
     'data': [
         'views/insured_state_view.xml',
         'views/insured_group_view.xml',
         'views/insurance_plan_view.xml',
+        'views/model_export_view.xml',
         'views/insured_menu_view.xml',
     ],
     'demo': [],
