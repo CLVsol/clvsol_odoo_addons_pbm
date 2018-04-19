@@ -29,10 +29,12 @@
     'depends': [
         'clv_card',
         'clv_insured_pbm',
+        'clv_export_pbm'
     ],
     'data': [
         'views/insured_view.xml',
         'views/card_state_view.xml',
+        'views/model_export_view.xml',
         'views/card_menu_view.xml',
     ],
     'demo': [],
