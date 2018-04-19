@@ -49,6 +49,12 @@ class Card(models.Model):
         string='Insured',
         ondelete='restrict'
     )
+    insured_name = fields.Char(
+        string='Insured Name',
+        related='insured_id.name',
+        store=False,
+        readonly=True
+    )
     insured_code = fields.Char(
         string='Insured Code',
         related='insured_id.code',
@@ -114,5 +120,11 @@ class Card(models.Model):
         string='Insured Categories',
         related='insured_id.category_names',
         store=True,
+        readonly=True
+    )
+    insured_date_inclusion = fields.Datetime(
+        string="Insured Inclusion Date",
+        related='insured_id.date_inclusion',
+        store=False,
         readonly=True
     )

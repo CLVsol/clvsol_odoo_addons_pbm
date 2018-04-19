@@ -52,6 +52,7 @@
                 <group name="status" position="before">
                     <group name="insured_info" string="Insured Information">
                         <field name="insured_id" options='{"no_open": False, "no_create": True}'/>
+                        <field name="insured_name" string="Insured Name"/>
                         <field name="insured_code" string="Insured Code"/>
                         <field name="insured_alias" string="Insured Alias"/>
                         <field name="insured_birthday" string="Insured Date of Birth"/>
@@ -61,6 +62,7 @@
                         <field name="insured_insurance_plan_id" string="Insurance Plan"/>
                         <field name="insured_state" string="Insured State"/>
                         <field name="insured_category_names" string="Insured Categories"/>
+                        <field name="insured_date_inclusion" string="Insured Inclusion Date"/>
                     </group>
                 </group>
             </field>
