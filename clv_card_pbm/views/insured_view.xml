@@ -55,6 +55,7 @@
                         <field name="insured_name" string="Insured Name"/>
                         <field name="insured_code" string="Insured Code"/>
                         <field name="insured_alias" string="Insured Alias"/>
+                        <field name="insured_main_insured_id" string="Main Insured"/>
                         <field name="insured_birthday" string="Insured Date of Birth"/>
                         <field name="insured_gender" string="Insured Gender"/>
                         <field name="insured_insured_group_id" string="Insured Group"/>
@@ -77,6 +78,7 @@
                 <field name="sequence_code" position="after">
                     <field name="insured_id"/>
                     <field name="insured_gender"/>
+                    <field name="insured_main_insured_id"/>
                     <field name="insured_insured_group_id"/>
                     <field name="insured_group_reg_number"/>
                     <field name="insured_insurance_plan_id"/>
@@ -95,6 +97,7 @@
                 <field name="sequence_code" position="after">
                     <field name="insured_id"/>
                     <field name="insured_gender"/>
+                    <field name="insured_main_insured_id"/>
                     <field name="insured_insured_group_id"/>
                     <field name="insured_group_reg_number"/>
                     <field name="insured_insurance_plan_id"/>
@@ -103,6 +106,7 @@
                 </field>
                 <group name="group_by" position="inside">
                     <filter string="Insured" context="{'group_by': 'insured_id'}"/>
+                    <filter string="Main Insured" context="{'group_by': 'insured_main_insured_id'}"/>
                     <filter string="Insured Gender" context="{'group_by': 'insured_gender'}"/>
                     <filter string="Insurance Group" context="{'group_by': 'insured_insured_group_id'}"/>
                     <filter string="Insurance Plan" context="{'group_by': 'insured_insurance_plan_id'}"/>

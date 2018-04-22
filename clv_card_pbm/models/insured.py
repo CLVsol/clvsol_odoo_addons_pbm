@@ -67,6 +67,13 @@ class Card(models.Model):
         store=False,
         readonly=True
     )
+    insured_main_insured_id = fields.Many2one(
+        comodel_name='clv.insured',
+        string='Main Insured',
+        related='insured_id.main_insured_id',
+        store=True,
+        readonly=True
+    )
     insured_birthday = fields.Date(
         string="Insured Date of Birth",
         related='insured_id.birthday',
