@@ -37,11 +37,23 @@
             sequence="20"
             action="clv_medicament.clv_medicament_active_component_action"/>
 
+        <menuitem name="Strings" id="clv_medicament.menu_pharmacy_config_medicament_active_components_strings"
+            parent="clv_medicament.menu_pharmacy_config_medicament_active_components"
+            groups="clv_medicament.group_user"
+            sequence="10"
+            action="clv_medicament.clv_medicament_active_component_str_action"/>
+
         <menuitem name="Manufacturers" id="clv_medicament.menu_pharmacy_config_medicament_manufacturers"
             parent="clv_medicament.menu_pharmacy_config_medicament"
             groups="clv_medicament.group_user"
             sequence="40"
             action="clv_medicament.clv_medicament_manufacturer_action"/>
+
+        <menuitem name="Strings" id="clv_medicament.menu_pharmacy_config_medicament_manufacturers_strings"
+            parent="clv_medicament.menu_pharmacy_config_medicament_manufacturers"
+            groups="clv_medicament.group_user"
+            sequence="10"
+            action="clv_medicament.clv_medicament_manufacturer_str_action"/>
 
         <menuitem name="Presentation Form" id="clv_medicament.menu_pharmacy_config_medicament_pres_form"
             parent="clv_medicament.menu_pharmacy_config_medicament"
