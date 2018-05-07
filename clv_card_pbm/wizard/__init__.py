@@ -18,33 +18,4 @@
 #
 ###############################################################################
 
-{
-    'name': 'Card (customizations for CLVhealth-PBM Solution)',
-    'summary': 'Card Module customizations for CLVhealth-PBM Solution.',
-    'version': '3.0.0',
-    'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
-    'license': 'AGPL-3',
-    'website': 'https://github.com/CLVsol',
-    'depends': [
-        'clv_card',
-        'clv_insured_pbm',
-        'clv_export_pbm'
-    ],
-    'data': [
-        'views/insured_view.xml',
-        'views/card_state_view.xml',
-        'views/model_export_view.xml',
-        'views/card_menu_view.xml',
-        'wizard/card_updt_view.xml',
-    ],
-    'demo': [],
-    'test': [],
-    'init_xml': [],
-    'test': [],
-    'update_xml': [],
-    'installable': True,
-    'application': False,
-    'active': False,
-    'css': [],
-}
+import card_updt
