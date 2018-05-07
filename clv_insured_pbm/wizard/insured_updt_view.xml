@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="clv_insured_updt_view_form_pbm" model="ir.ui.view">
+            <field name="name">clv.insured.updt.form</field>
+            <field name="model">clv.insured.updt</field>
+            <field name="inherit_id" ref="clv_insured.clv_insured_updt_view_form"/>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <group name="global_tag_ids_selection" position="before">
+                    <group>
+                        <field name="state_selection"/>
+                    </group>
+                    <group>
+                        <field name="state" nolabel='1'/>
+                    </group>
+                </group>
+                <group name="category_ids" position="after">
+                    <group>
+                        <field name="insured_group_id_selection"/>
+                    </group>
+                    <group>
+                        <field name="insured_group_id" nolabel='1' options="{'no_open': False, 'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name="insurance_plan_id_selection"/>
+                    </group>
+                    <group>
+                        <field name="insurance_plan_id" nolabel='1' options="{'no_open': False, 'no_create': True}"/>
+                    </group>
+                </group>
+            </field>
+        </record>
+
+    </data>
+</odoo>
