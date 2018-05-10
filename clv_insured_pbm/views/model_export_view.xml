@@ -9,10 +9,10 @@
             <field name="priority" eval="7"/>
             <field name="arch" type="xml">
                 <field name="date_export" position="before">
-                    <field name="count_model_export_insureds" attrs="{'invisible':[('model_model', '!=', 'clv.insured')]}"/>
+                    <field name="count_model_export_insureds" attrs="{'invisible':['|', ('model_model', '!=', 'clv.insured'), ('export_all_items', '=', True)]}"/>
                 </field>
                 <page name="settings" position="before">
-                    <page name="insureds" string="Insureds" attrs="{'invisible':[('model_model', '!=', 'clv.insured')]}">
+                    <page name="insureds" string="Insureds" attrs="{'invisible':['|', ('model_model', '!=', 'clv.insured'), ('export_all_items', '=', True)]}">
                         <group>
                             <field name="model_export_insured_ids" colspan="4" nolabel="1"/>
                         </group>
