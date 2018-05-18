@@ -21,8 +21,12 @@
 from openerp import models
 
 
-class ModelExport(models.AbstractModel):
+class ObjectModelExport(models.AbstractModel):
     _inherit = 'clv.object.model_export'
 
-    def model_export_dir_path(self):
-        return '/opt/openerp/pbm/data/xls'
+    def model_export_dir_path(self, export_type):
+        if export_type == 'xls':
+            return '/opt/openerp/filestore/pbm/export/xls'
+        if export_type == 'sqlite':
+            return '/opt/openerp/filestore/pbm/export/sqlite'
+        return False
