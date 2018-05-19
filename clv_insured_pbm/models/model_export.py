@@ -46,6 +46,6 @@ class ModelExport(models.Model):
     @api.depends('model_model')
     def compute_model_items(self):
         for r in self:
-            if self.model_model == 'clv.insured':
+            if r.model_model == 'clv.insured':
                 r.model_items = 'model_export_insured_ids'
         super(ModelExport, self).compute_model_items()
