@@ -4,17 +4,17 @@
 
 <odoo>
 
-    <menuitem name="Exports" id="clv_base.menu_exports" 
+    <menuitem name="Reports" id="clv_base.menu_reports" 
         groups="clv_base.group_user"
-        sequence="20"/>
+        sequence="19"/>
 
-    <menuitem name="Exports" id="clv_base.menu_exports_exports"  
-        parent="clv_base.menu_exports"
+    <menuitem name="Report" id="clv_base.menu_reports_report"  
+        parent="clv_base.menu_reports"
         groups="clv_base.group_user"
         sequence="10"/>
 
-    <menuitem name="Configuration" id="clv_base.menu_exports_config"  
-        parent="clv_base.menu_exports"
+    <menuitem name="Configuration" id="clv_base.menu_reports_config"  
+        parent="clv_base.menu_reports"
         groups="clv_base.group_manager"
         sequence="90"/>
 
