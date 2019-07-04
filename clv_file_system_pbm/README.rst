@@ -9,3 +9,9 @@ File System
 File System Module customizations for CLVhealth-PBM Solution.
 
 Developed by `CLVsol <https://github.com/CLVsol>`_.
+
+
+Credits
+=======
+
+This Module was based on "`Directory Files Download <https://github.com/onesteinbv/addons-onestein/tree/11.0/base_directory_file_download>`_" Copyright 2017-2018 Onestein (`http://www.onestein.eu <http://www.onestein.eu>`_)
