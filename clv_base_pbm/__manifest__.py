@@ -22,6 +22,7 @@
         'views/global_settings_menu_view.xml',
         'views/mfile_menu_view.xml',
         'views/community_menu_view.xml',
+        'views/insurance_menu_view.xml',
         'views/health_menu_view.xml',
         'views/export_menu_view.xml',
         'views/report_menu_view.xml',
