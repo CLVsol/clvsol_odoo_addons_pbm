@@ -1,42 +1,31 @@
 # -*- coding: utf-8 -*-
-###############################################################################
-#
 # Copyright (C) 2013-Today  Carlos Eduardo Vercelino - CLVsol
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-#
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-###############################################################################
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
     'name': 'Insured (customizations for CLVhealth-PBM Solution)',
     'summary': 'Insured Module customizations for CLVhealth-PBM Solution.',
-    'version': '3.0.0',
+    'version': '12.0.4.0',
     'author': 'Carlos Eduardo Vercelino - CLVsol',
-    'category': 'Generic Modules/Others',
+    'category': 'CLVsol Solutions',
     'license': 'AGPL-3',
     'website': 'https://github.com/CLVsol',
     'depends': [
+        'clv_base_pbm',
         'clv_insured',
-        'clv_export_pbm'
+        'clv_document',
+        'clv_set',
     ],
     'data': [
+        'data/insured_seq.xml',
+        'data/document.xml',
+        'views/insured_code_view.xml',
+        'views/document_view.xml',
+        'views/set_element_view.xml',
+        'views/insured_reg_state_view.xml',
         'views/insured_state_view.xml',
-        'views/insured_group_view.xml',
-        'views/insurance_plan_view.xml',
-        'views/model_export_view.xml',
         'views/insured_menu_view.xml',
-        'wizard/insured_updt_view.xml',
+        'wizard/insured_associate_to_set_view.xml',
     ],
     'demo': [],
     'test': [],
